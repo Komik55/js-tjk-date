@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    line-height: 1.5;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width:100%;
+    height: 100%;
+}
+body{
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.wrap__data,.wrap__time{
+    display: flex;
+}
+.wrap__time{
+    border-top-left-radius:6px;
+    border-bottom-right-radius: 6px;
+    padding: 22px;
+    background-color: #001f3f;
+    justify-content: space-evenly;
+}
+.wrap__time > div{
+    text-shadow: 0px 33px 5px red;
+    color:#fff;
+    transition: 0.5s ease-in-out;
+}
+.wrap__data > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 20vmax;
+    height: 30vmax;
+}
+.wrap__data > div:hover{
+    transition: 0.5s;
+transform: scale(0.9);
+}
+
+.wrap__data > div:first-child{
+background-color: red;
+text-align: center;
+}
+.wrap__data > div:nth-child(2){
+background-image: url('./img/korona.jpg');
+background-repeat: no-repeat;
+background-position: center center;
+background-size: 80%;
+}
+
+.wrap__data > div:last-child{
+background-color: green;
+}
+
+@media screen and (max-width:800px){
+    .wrap__data{
+        width: 90vw;
+    }
+    .wrap__data > div{
+        width: 30vw;
+        height: 60vh;
+    }
+}
+@media screen and (max-width:600px){
+    .wrap__data{
+        display: flex;
+        flex-direction: column;
+    }
+    .wrap__data > div{
+        width: 90vw;
+        height: 27vh;
+    }
+}
